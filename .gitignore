@@ -1,0 +1,5 @@
+**/.DS_Store
+**/.idea/
+**/__pycache__/
+ignored_by_git/
+**/archive

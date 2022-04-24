@@ -1,0 +1,67 @@
+{
+  "network_path": "networks/resnet_9b_bn_adv_2.2_bs256_lr-1.pth",
+  "input_dim": [
+    3,
+    32,
+    32
+  ],
+  "normalization_means": [
+    0.4914,
+    0.4822,
+    0.4465
+  ],
+  "normalization_stds": [
+    0.2471,
+    0.2435,
+    0.2616
+  ],
+  "test_data_path": "test_data/cifar10_test_100.csv",
+  "eps": 0.00392156862,
+  "use_gpu": true,
+  "optimize_alpha": true,
+  "alpha_lr": 0.1,
+  "alpha_opt_iterations": 100,
+  "optimize_prima": true,
+  "prima_lr": 0.01,
+  "prima_opt_iterations": 100,
+  "prima_hyperparameters": {
+    "sparse_n": 50,
+    "K": 3,
+    "s": 1,
+    "num_proc_to_compute_constraints": 2,
+    "max_unstable_nodes_considered_per_layer": 1000,
+    "min_relu_transformer_area_to_be_considered": 0.01,
+    "fraction_of_constraints_to_keep": 1.0
+  },
+  "peak_lr_scaling_factor": 2.0,
+  "final_lr_div_factor": 10.0,
+  "beta_lr": 0.05,
+  "branching": {
+    "method": "babsr",
+    "use_prima_contributions": false,
+    "use_optimized_slopes": false,
+    "use_beta_contributions": false,
+    "propagation_effect_mode": "bias",
+    "use_indirect_effect": false,
+    "reduce_op": "min",
+    "use_abs": true
+  },
+  "bab_batch_sizes": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "recompute_intermediate_bounds_after_branching": true,
+  "use_dependence_sets": true,
+  "use_early_termination": true,
+  "random_seed": 0,
+  "timeout": 600,
+  "experiment_name": "resnet_9b",
+  "use_online_logging": false,
+  "comet_api_key": "-",
+  "comet_project_name": "-",
+  "comet_workspace": "-"
+}
