@@ -93,6 +93,22 @@ Contributors
 * [Mark Niklas Müller](https://www.sri.inf.ethz.ch/people/mark) - mark.mueller@inf.ethz.ch  
 * [Nikola Jovanovic](https://www.sri.inf.ethz.ch/people/nikola) - nikola.jovanovic@inf.ethz.ch 
 
+Citing This Work
+----------------------
+
+If you find this work useful for your research, please cite it as:
+
+```
+@inproceedings{
+    ferrari2022complete,
+    title={Complete Verification via Multi-Neuron Relaxation Guided Branch-and-Bound},
+    author={Claudio Ferrari and Mark Niklas Mueller and Nikola Jovanovi{\'c} and Martin Vechev},
+    booktitle={International Conference on Learning Representations},
+    year={2022},
+    url={https://openreview.net/forum?id=l_amHf1oaK}
+}
+```
+
 License and Copyright
 ---------------------
 
