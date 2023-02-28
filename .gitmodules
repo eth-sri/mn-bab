@@ -1,0 +1,6 @@
+[submodule "onnx2pytorch"]
+	path = onnx2pytorch
+	url = ../../OU-VECHEV/onnx2pytorch.git
+[submodule "dnnv"]
+	path = dnnv
+	url = ../../OU-VECHEV/dnnv.git

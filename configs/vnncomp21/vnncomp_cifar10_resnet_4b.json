@@ -1,0 +1,67 @@
+{
+  "benchmark_instances_path": "benchmarks_vnn21/verivital/verivital_instances.csv",
+  "input_dim": [
+    3,
+    32,
+    32
+  ],
+  "use_gpu": true,
+  "optimize_alpha": true,
+  "alpha_lr": 0.1,
+  "alpha_opt_iterations": 20,
+  "optimize_prima": true,
+  "prima_lr": 0.01,
+  "prima_opt_iterations": 20,
+  "prima_hyperparameters": {
+    "sparse_n": 50,
+    "K": 3,
+    "s": 1,
+    "num_proc_to_compute_constraints": 2,
+    "max_unstable_nodes_considered_per_layer": 1000,
+    "min_relu_transformer_area_to_be_considered": 0.05,
+    "fraction_of_constraints_to_keep": 1.0
+  },
+  "branching": {
+    "method": "babsr",
+    "use_prima_contributions": false,
+    "use_optimized_slopes": false,
+    "use_beta_contributions": false,
+    "propagation_effect_mode": "bias",
+    "use_indirect_effect": false,
+    "reduce_op": "geo_mean",
+    "use_abs": true,
+    "use_cost_adjusted_scores": false
+  },
+  "peak_lr_scaling_factor": 2.0,
+  "final_lr_div_factor": 10.0,
+  "beta_lr": 0.05,
+  "bab_batch_sizes": [
+    2,
+    2,
+    4,
+    4,
+    4,
+    8,
+    8,
+    16,
+    32,
+    32
+  ],
+  "outer_verifier": {
+    "initial_dp": true,
+    "adversarial_attack": false,
+    "adversarial_attack_restarts": 5,
+    "refine_via_milp": false,
+    "refine_intermediate_bounds": false,
+    "refine_intermediate_bounds_prima": false
+  },
+  "recompute_intermediate_bounds_after_branching": true,
+  "use_dependence_sets": false,
+  "use_early_termination": true,
+  "random_seed": 0,
+  "experiment_name": "vnn_comp_oval21",
+  "use_online_logging": false,
+  "comet_api_key": "-",
+  "comet_project_name": "-",
+  "comet_workspace": "-"
+}

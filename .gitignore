@@ -1,0 +1,16 @@
+**/.DS_Store
+**/.idea/
+**/__pycache__/
+ignored_by_git/
+**/archive
+.vscode
+ELINA
+gmp-*
+mpfr-*
+cddlib-*
+*.coverage*
+*.dat
+scripts/benchmark_results/*
+data/comp_bounds/*
+run/*
+*.coverage

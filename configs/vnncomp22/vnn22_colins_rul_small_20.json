@@ -1,0 +1,90 @@
+{
+  "network_path": "vnn-comp-2022-sup/benchmarks/collins_rul_cnn/onnx/NN_rul_small_window_20.onnx.gz",
+  "input_dim": [
+    1,
+    20,
+    20
+  ],
+  "outer_verifier": {
+    "initial_dp": true,
+    "adversarial_attack": false,
+    "adversarial_attack_restarts": 5,
+    "milp": {
+      "refine_via_milp": 8,
+      "timeout_refine_total": 200,
+      "timeout_refine_neuron": 10,
+      "solve_via_milp": false
+    },
+    "refine_intermediate_bounds": false,
+    "refine_intermediate_bounds_prima": false,
+    "input_domain_splitting": false
+  },
+  "max_num_queries": 1000,
+  "benchmark_instances_path": "vnn-comp-2022-sup/benchmarks/colins_rul/instances.csv",
+  "test_data_path": "",
+  "eps": 0,
+  "use_gpu": true,
+  "optimize_alpha": true,
+  "dtype": "float64",
+  "alpha_lr": 0.1,
+  "alpha_opt_iterations": 20,
+  "parameter_sharing": {
+    "fully_connected": "none",
+    "conv2d": "in_channel"
+  },
+  "parameter_sharing_layer_id_filter": "layer_ids[:]",
+  "optimize_prima": false,
+  "prima_lr": 0.01,
+  "prima_opt_iterations": 20,
+  "prima_hyperparameters": {
+    "sparse_n": 50,
+    "K": 3,
+    "s": 1,
+    "num_proc_to_compute_constraints": 2,
+    "max_number_of_parallel_input_constraint_queries": 10000,
+    "max_unstable_nodes_considered_per_layer": 1000,
+    "min_relu_transformer_area_to_be_considered": 0.01,
+    "fraction_of_constraints_to_keep": 1.0
+  },
+  "peak_lr_scaling_factor": 2.0,
+  "final_lr_div_factor": 10.0,
+  "beta_lr": 0.05,
+  "branching": {
+    "method": "babsr",
+    "use_prima_contributions": false,
+    "use_optimized_slopes": false,
+    "use_beta_contributions": false,
+    "propagation_effect_mode": "bias",
+    "use_indirect_effect": false,
+    "reduce_op": "geo_mean",
+    "use_abs": true,
+    "use_cost_adjusted_scores": false
+  },
+  "bab_batch_sizes": [
+    32,
+    32,
+    32,
+    64,
+    64
+  ],
+  "domain_splitting": {
+    "initial_splits": 2,
+    "initial_split_dims": [],
+    "max_depth": 25,
+    "domain": "DPF",
+    "batch_size": 32,
+    "split_factor": 2
+  },
+  "run_BaB": true,
+  "box_pass": true,
+  "recompute_intermediate_bounds_after_branching": true,
+  "use_dependence_sets": false,
+  "use_early_termination": true,
+  "random_seed": 0,
+  "timeout": 300,
+  "experiment_name": "colins_aerospace_small_20",
+  "use_online_logging": false,
+  "comet_api_key": "-",
+  "comet_project_name": "-",
+  "comet_workspace": "-"
+}

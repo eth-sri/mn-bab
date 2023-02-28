@@ -1,0 +1,138 @@
+{
+  "carvana_unet_2022": {
+    "372992-149570": {
+      "config": "configs/vnncomp22/vnn22_carvana_unet_simp_small.json"
+    },
+    "274816-330050": {
+      "config": "configs/vnncomp22/vnn22_carvana_unet_upsample_small.json"
+    }
+  },
+  "cifar_biasfield": {
+    "default": {
+      "config": "configs/vnncomp22/vnn22_cifar_biasfield.json"
+    }
+  },
+  "cifar100_tinyimagenet_resnet": {
+    "55460-1350424": {
+      "config": "configs/vnncomp22/vnn22_tinyimagenet_cifar100_resnet_small.json"
+    },
+    "55460-2532632": {
+      "config": "configs/vnncomp22/vnn22_tinyimagenet_cifar100_resnet_medium.json"
+    },
+    "286820-3803544": {
+      "config": "configs/vnncomp22/vnn22_tinyimagenet_cifar100_resnet_large.json"
+    },
+    "68836-7909592": {
+      "config": "configs/vnncomp22/vnn22_tinyimagenet_cifar100_resnet_super.json"
+    },
+    "172296-3612432": {
+      "config": "configs/vnncomp22/vnn22_tinyimagenet_resnet_medium.json"
+    }
+  },
+  "collins_rul_cnn": {
+    "5500-60826": {
+      "config": "configs/vnncomp22/vnn22_colins_rul_small_20.json"
+    },
+    "10300-62446": {
+      "config": "configs/vnncomp22/vnn22_colins_rul_full_20.json"
+    },
+    "28300-262446": {
+      "config": "configs/vnncomp22/vnn22_colins_rul_full_40.json"
+    }
+  },
+  "mnist_fc": {
+    "512-269322": {
+      "config": "configs/vnncomp22/vnn22_mnist-net_256x2.json"
+    },
+    "1024-400906": {
+      "config": "configs/vnncomp22/vnn22_mnist-net_256x4.json"
+    },
+    "1536-532490": {
+      "config": "configs/vnncomp22/vnn22_mnist-net_256x6.json"
+    }
+  },
+  "nn4sys": {
+    "384-33409": {
+      "config": "configs/vnncomp22/vnn22_nn4sys_lindex.json"
+    },
+    "640-66433": {
+      "config": "configs/vnncomp22/vnn22_nn4sys_lindex_deep.json"
+    },
+    "2945-155777": {
+      "config": "configs/vnncomp22/vnn22_nn4sys_mscn_128d.json"
+    },
+    "5890-311555": {
+      "config": "configs/vnncomp22/vnn22_nn4sys_mscn_128d_dual.json"
+    },
+    "47105-37881857": {
+      "config": "configs/vnncomp22/vnn22_nn4sys_mscn_2048d.json"
+    },
+    "94210-75763715": {
+      "config": "configs/vnncomp22/vnn22_nn4sys_mscn_2048d_dual.json"
+    }
+  },
+  "oval21": {
+    "3172-105966": {
+      "config": "configs/vnncomp22/vnn22_oval21_cifar_base_kw.json"
+    },
+    "6756-54902": {
+      "config": "configs/vnncomp22/vnn22_oval21_cifar_deep_kw.json"
+    },
+    "6244-214918": {
+      "config": "configs/vnncomp22/vnn22_oval21_cifar_wide_kw.json"
+    }
+  },
+  "reach_prob_density": {
+    "64-1998": {
+      "config": "configs/vnncomp22/vnn22_reach_gcas.json"
+    },
+    "192-9029": {
+      "config": "configs/vnncomp22/vnn22_reach_robot.json"
+    },
+    "64-1283": {
+      "config": "configs/vnncomp22/vnn22_reach_vdp.json"
+    }
+  },
+  "rl_benchmarks": {
+    "128-4610": {
+      "config": "configs/vnncomp22/vnn22_rl_benchmarks_cartpole.json"
+    },
+    "512-70152": {
+      "config": "configs/vnncomp22/vnn22_rl_benchmarks_dubins_rejoin.json"
+    },
+    "128-4996": {
+      "config": "configs/vnncomp22/vnn22_rl_benchmarks_lunarlander.json"
+    }
+  },
+  "sri_resnet_a": {
+    "11364-354710": {
+      "config": "configs/vnncomp22/vnn22_sri_resnet_a.json"
+    }
+  },
+  "sri_resnet_b": {
+    "11364-354710": {
+      "config": "configs/vnncomp22/vnn22_sri_resnet_b.json"
+    }
+  },
+  "tllverifybench": {
+    "default": {
+      "config": "configs/vnncomp22/vnn22_tllverifybench.json"
+    }
+  },
+  "vggnet16_2022": {
+    "default": {
+      "config": "configs/vnncomp22/vnn22_vggnet16_vggnet167.json"
+    }
+  },
+  "default": {
+    "default": {
+      "config": "configs/vnncomp22/default_config.json",
+      "adapt_input_dim": true
+    }
+  },
+  "acasxu": {
+    "default": {
+      "config": "configs/vnncomp22/vnn22_acas_xu.json"
+    }
+  }
+}

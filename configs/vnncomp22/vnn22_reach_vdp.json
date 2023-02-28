@@ -1,0 +1,82 @@
+{
+  "network_path": "vnn-comp-2022-sup/benchmarks/reach_prob_density/onnx/vdp.onnx.gz",
+  "input_dim": [
+    3
+  ],
+  "outer_verifier": {
+    "initial_dp": true,
+    "adversarial_attack": false,
+    "adversarial_attack_restarts": 5,
+    "milp": {
+      "refine_via_milp": false,
+      "timeout_refine_total": 200,
+      "timeout_refine_neuron": 10,
+      "solve_via_milp": false
+    },
+    "refine_intermediate_bounds": false,
+    "refine_intermediate_bounds_prima": false,
+    "input_domain_splitting": true
+  },
+  "max_num_queries": 1000,
+  "benchmark_instances_path": "vnn-comp-2022-sup/benchmarks/reach_prob_density/instances.csv",
+  "test_data_path": "",
+  "eps": 0,
+  "use_gpu": true,
+  "optimize_alpha": true,
+  "dtype": "float64",
+  "alpha_lr": 0.1,
+  "alpha_opt_iterations": 20,
+  "optimize_prima": true,
+  "prima_lr": 0.01,
+  "prima_opt_iterations": 20,
+  "prima_hyperparameters": {
+    "sparse_n": 50,
+    "K": 3,
+    "s": 1,
+    "num_proc_to_compute_constraints": 2,
+    "max_number_of_parallel_input_constraint_queries": 10000,
+    "max_unstable_nodes_considered_per_layer": 1000,
+    "min_relu_transformer_area_to_be_considered": 0.01,
+    "fraction_of_constraints_to_keep": 1.0
+  },
+  "peak_lr_scaling_factor": 2.0,
+  "final_lr_div_factor": 10.0,
+  "beta_lr": 0.05,
+  "branching": {
+    "method": "babsr",
+    "use_prima_contributions": false,
+    "use_optimized_slopes": false,
+    "use_beta_contributions": false,
+    "propagation_effect_mode": "bias",
+    "use_indirect_effect": false,
+    "reduce_op": "geo_mean",
+    "use_abs": true,
+    "use_cost_adjusted_scores": false
+  },
+  "bab_batch_sizes": [
+    8,
+    16
+  ],
+  "domain_splitting": {
+    "initial_splits": 10,
+    "initial_split_dims": [
+      0,
+      1,
+      2
+    ],
+    "max_depth": 100,
+    "domain": "DPF",
+    "batch_size": 5000,
+    "split_factor": 2
+  },
+  "recompute_intermediate_bounds_after_branching": true,
+  "use_dependence_sets": false,
+  "use_early_termination": false,
+  "random_seed": 0,
+  "timeout": 300,
+  "experiment_name": "reach_vdp",
+  "use_online_logging": false,
+  "comet_api_key": "-",
+  "comet_project_name": "-",
+  "comet_workspace": "-"
+}
