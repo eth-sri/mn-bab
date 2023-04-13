@@ -12,7 +12,7 @@ from src.utilities.argument_parsing import get_args, get_config_from_json
 from src.utilities.config import make_config, Dtype
 from src.utilities.initialization import seed_everything
 from src.utilities.loading.data import transform_and_bound
-from src.utilities.loading.network import freeze_network, load_net
+from src.utilities.loading.network import freeze_network, load_net, load_onnx_model
 from src.utilities.logging import Logger, get_log_file_name
 from src.verification_instance import VerificationInstance
 
@@ -38,7 +38,15 @@ if __name__ == "__main__":
         device = torch.device("cpu")
         experiment_logger.log_text("Using cpu")
 
-    original_network = load_net(**config.network.load_params())
+    net_format = config.network.path.split(".")[-1]
+    if net_format in ["onnx", "gz"]:
+        net_seq, onnx_shape, inp_name = load_onnx_model(config.network.path)  # Like this for mypy
+        original_network: nn.Module = net_seq
+        if len(config.input_dim) == 0:
+            print(f"Setting shape: {onnx_shape}")
+            config.input_dim = onnx_shape
+    else:
+        original_network = load_net(**config.network.load_params())
     original_network.to(device)
     original_network.eval()
     assert isinstance(original_network, nn.Sequential)
@@ -107,7 +115,7 @@ if __name__ == "__main__":
         running_total_time += iteration_time
         print("Iteration time: ", iteration_time)
         print("Running average verification time:", running_total_time / n_correct)
-        print("Correct", n_correct, "out of", i)
+        print("Correct", n_correct, "out of", i+1)
         print("Verified", n_verified, "out of", n_correct-n_disproved)
         print("Disproved", n_disproved, "out of", n_correct - n_verified)
         print()
