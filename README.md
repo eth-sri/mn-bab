@@ -32,7 +32,7 @@ Create and activate a conda environment:
   conda activate MNBAB
   ```
 
-This script installs a few necessary libraries, the ELINA library, clones the repo and installs the necessary dependencies. It was tested on a AWS Deep Learning AMI (Ubuntu 18.04) instance.
+This script installs a few necessary prerequisites including the ELINA library and GUROBI solver and sets some PATHS. It was tested on an AWS Deep Learning AMI (Ubuntu 18.04) instance.
 
 ```
 source setup.sh
@@ -55,6 +55,7 @@ Download the full MNIST, CIFAR10, and TinyImageNet test datasets in the right fo
 python src/verify.py -c configs/cifar10_conv_small.json
 ```
 
+Contributors
 ----------------------
 * [Claudio Ferrari ](https://github.com/ferraric) - c101@gmx.ch
 * [Mark Niklas Müller](https://www.sri.inf.ethz.ch/people/mark) - mark.mueller@inf.ethz.ch  
