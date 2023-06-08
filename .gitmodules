@@ -1,0 +1,6 @@
+[submodule "dnnv"]
+	path = dnnv
+	url = https://github.com/dlshriver/dnnv
+[submodule "onnx2pytorch"]
+	path = onnx2pytorch
+	url = git@github.com:mnmueller/onnx2pytorch_vnn.git
